@@ -1,10 +1,11 @@
 # 🧠 Learning LLM
 
-My hands-on learning journey through LLM Engineering — following the [LLM Engineering: Master AI, Large Language Models & Agents](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/) course by Ed Donner & John Hughes.
+I will be sharing my hands-on learning journey through LLM Engineering — following the [LLM Engineering: Master AI, Large Language Models & Agents](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/) course by Ed Donner & John Hughes.
 
 > **Goal:** Build and deploy 8 LLM apps in 8 weeks, mastering Generative AI, RAG, LoRA, and AI Agents.
 
-## 📚 What This Repo Covers
+
+## 📚 What This Repo Covers:
 
 - OpenAI API — Chat Completions, System vs User Prompts
 - Working with Open-Source Models (Ollama)
@@ -14,7 +15,7 @@ My hands-on learning journey through LLM Engineering — following the [LLM Engi
 - AI Agents & Multi-Agent Systems
 - Deployment of LLM-powered Apps
 
-## 🗂️ Repo Structure
+## 🗂️ Repo Structure:
 
 ```
 Learning_LLM/
@@ -28,7 +29,7 @@ Learning_LLM/
 └── README.md
 ```
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stacks:
 
 - **Language:** Python
 - **LLM APIs:** OpenAI, Ollama
@@ -37,7 +38,7 @@ Learning_LLM/
 
 ## ⚙️ Setup
 
-1. Clone the repo:
+1. Clone the  repo:
    ```bash
    git clone https://github.com/itssahil2059/Learning_LLM.git
    cd Learning_LLM
@@ -54,7 +55,7 @@ Learning_LLM/
    python week1/day1_chat_completion.py
    ```
 
-## 📈 Progress Tracker
+## 📈 Progress Tracker:
 
 | Week | Topic | Status |
 |------|-------|--------|
