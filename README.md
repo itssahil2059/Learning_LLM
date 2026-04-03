@@ -55,11 +55,11 @@ Learning_LLM/
    python week1/day1_chat_completion.py
    ```
 
-## 📈 Progress Tracker:
+## 📈 Progress Tracker
 
 | Week | Topic | Status |
 |------|-------|--------|
-| Week 1 | Build Your First LLM Product — Exploring Top Models | 🔄 In Progress |
+| Week 1 | Build Your First LLM Product — Exploring Top Models | 🔄 Day 4/5 Complete |
 | Week 2 | TBD | ⬜ Not Started |
 | Week 3 | TBD | ⬜ Not Started |
 | Week 4 | TBD | ⬜ Not Started |
