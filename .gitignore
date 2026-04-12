@@ -1,0 +1,20 @@
+# Secret files - NEVER push
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# Large model files
+*.pkl
+*.bin
+*.pt
