@@ -67,3 +67,63 @@ gemini   = OpenAI(api_key=google_key, base_url="https://generativelanguage.googl
 grok     = OpenAI(api_key=grok_key,   base_url="https://api.x.ai/v1")
 ollama   = OpenAI(api_key="ollama",   base_url="http://localhost:11434/v1")
 
+## ✈️ Day 4 — FlightAI Tool Calling
+
+### What I Built
+A FlightAI airline customer support assistant that can look up and set real ticket prices using tool calling.
+
+### Key Concepts Learned
+
+**Tool Calling** — giving the LLM the ability to request real Python functions:
+- LLM does NOT run code itself
+- It sends a message saying "please call this function with these args"
+- Your Python code runs the function and sends result back
+- LLM uses result to form final answer
+
+**The Tool Calling Loop:**
+```python
+while response.choices[0].finish_reason == "tool_calls":
+    # run the tool
+    # send result back
+    # call API again
+```
+
+**Why while not if:**
+- `if` handles ONE round of tool calls
+- `while` handles CHAINED tool calls (LLM calls tools multiple times)
+
+**Tool Schema** — describing functions to the LLM in JSON:
+```python
+price_function = {
+    "name": "get_ticket_price",
+    "description": "Get the price of a ticket",  # LLM reads this!
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "destination_city": {"type": "string"}
+        },
+        "required": ["destination_city"]
+    }
+}
+```
+
+**SQLite Database** — storing prices permanently:
+```python
+# Read
+cursor.execute('SELECT price FROM prices WHERE city = ?', (city,))
+
+# Write
+cursor.execute('INSERT INTO prices (city, price) VALUES (?, ?) 
+               ON CONFLICT(city) DO UPDATE SET price = ?', (city, price, price))
+```
+
+### Files
+| File | Description |
+|---|---|
+| `day4.py` | FlightAI chatbot with tool calling and SQLite |
+
+### Tools Built
+| Tool | What it does |
+|---|---|
+| `get_ticket_price` | Looks up ticket price from database |
+| `set_ticket_price` | Sets or updates a ticket price |
