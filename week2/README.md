@@ -127,3 +127,31 @@ cursor.execute('INSERT INTO prices (city, price) VALUES (?, ?)
 |---|---|
 | `get_ticket_price` | Looks up ticket price from database |
 | `set_ticket_price` | Sets or updates a ticket price |
+
+## 🎨 Day 5 — Multi-Modal FlightAI
+
+### What I Built
+Full multi-modal airline assistant combining text chat, image generation and text-to-speech audio.
+
+### Key Concepts
+
+**artist()** — generates a travel image using DALL-E-3 (~4 cents per image)
+
+**talker()** — converts AI response to spoken audio using TTS
+
+**gr.Blocks** — custom Gradio UI with full control over layout:
+- Left panel: chatbot
+- Right panel: generated city image  
+- Below: audio playback
+- Bottom: text input
+
+**Two-step submit pattern:**
+- Step 1: put_message_in_chatbot() — adds user message to chat instantly
+- Step 2: chat() — calls API, generates audio and image, updates everything
+
+### New vs Day 4
+| Day 4 | Day 5 |
+|---|---|
+| Text only | Text + Image + Audio |
+| gr.ChatInterface | gr.Blocks (custom layout) |
+| Simple chat function | Returns 3 outputs |
