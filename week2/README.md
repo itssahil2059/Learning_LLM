@@ -155,3 +155,21 @@ Full multi-modal airline assistant combining text chat, image generation and tex
 | Text only | Text + Image + Audio |
 | gr.ChatInterface | gr.Blocks (custom layout) |
 | Simple chat function | Returns 3 outputs |
+
+## 📄 Project — Resume Analyzer
+
+### What it does
+AI-powered resume analyzer that reads resumes and provides detailed feedback on:
+- Overall quality score
+- Key skills identified
+- Experience level assessment
+- Formatting suggestions
+- Missing keywords for target jobs
+
+### Technologies
+- Gradio for UI
+- OpenAI GPT-4 mini for analysis
+- Python for backend
+
+### Status
+🚀 Project started - Core structure in place
