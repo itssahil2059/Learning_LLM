@@ -164,6 +164,12 @@ with gr.Blocks() as ui:
     with gr.Row():
         message = gr.Textbox(label="Chat with FlightAI:")
 
+     # Two-step submit pattern:
+    # Step 1 - put_message_in_chatbot() runs first
+    #          adds user message to chat instantly so UI feels responsive
+    #          also clears the textbox
+    # Step 2 - .then() chains chat() to run after step 1
+    #          calls API, generates audio and image, updates all 3 outputs
     message.submit(
         put_message_in_chatbot,
         inputs=[message, chatbot],
