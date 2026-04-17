@@ -31,6 +31,8 @@ system_message = """
 You are a helpful assistant for an Airline called FlightAI.
 Give short, courteous answers, no more than 1 sentence.
 Always be accurate. If you don't know the answer, say so.
+Always mention the city name when discussing ticket prices.
+Wish the customer a pleasant journey when they mention booking.
 """
 
 # ─────────────────────────────────────────
@@ -173,4 +175,4 @@ with gr.Blocks() as ui:
     )
 
 if __name__ == "__main__":
-    ui.launch(inbrowser=True)
+    ui.launch(inbrowser=True, auth=("flightai", "travel2025"))
