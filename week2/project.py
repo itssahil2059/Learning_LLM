@@ -37,4 +37,24 @@ def analyze_resume(resume_text):
 
 
 if __name__ == "__main__":
-    pass
+    resume_input = gr.Textbox(
+        label="Paste your resume:",
+        lines=12,
+        placeholder="Copy and paste your resume text here..."
+    )
+    
+    analysis_output = gr.Textbox(
+        label="Analysis:",
+        lines=15
+    )
+    
+    view = gr.Interface(
+        fn=analyze_resume,
+        inputs=resume_input,
+        outputs=analysis_output,
+        title="📄 Resume Analyzer",
+        description="Get AI-powered feedback on your resume",
+        flagging_mode="never"
+    )
+    
+    view.launch()
