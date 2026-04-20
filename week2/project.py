@@ -29,10 +29,13 @@ def analyze_resume(resume_text):
     
     response = openai.chat.completions.create(
         model=MODEL,
-        messages=messages
+        messages=messages,
+        stream=True
     )
-    
-    return response.choices[0].message.content
+    result = ""
+    for chunk in response:
+        result += chunk.choices[0].delta.content or ""
+        yield result
 
 
 
