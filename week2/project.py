@@ -14,7 +14,14 @@ MODEL = "gpt-4.1-mini"
 # System message for resume analysis
 system_message = """
 You are an expert resume analyzer.
-Analyze the resume and provide constructive feedback.
+Analyze the resume and provide constructive feedback on:
+1. Overall structure and formatting
+2. Key strengths identified
+3. Areas for improvement
+4. Missing keywords for job applications
+5. Top 3 actionable suggestions
+
+Be concise, specific, and professional.
 """
 
 def analyze_resume(resume_text):
