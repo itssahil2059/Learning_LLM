@@ -59,12 +59,15 @@ if __name__ == "__main__":
     )
     
     view = gr.Interface(
-        fn=analyze_resume,
-        inputs=resume_input,
-        outputs=analysis_output,
-        title="📄 Resume Analyzer",
-        description="Get AI-powered feedback on your resume",
-        flagging_mode="never"
-    )
+    fn=analyze_resume,
+    inputs=resume_input,
+    outputs=analysis_output,
+    title="📄 Resume Analyzer",
+    description="Get AI-powered feedback on your resume",
+    examples=[  # ← add this
+        ["John Doe\nSoftware Engineer\n\nExperience:\n- Built web apps\n- Python, JavaScript\n\nEducation:\nBS Computer Science"]
+    ],
+    flagging_mode="never"
+)
     
     view.launch()
