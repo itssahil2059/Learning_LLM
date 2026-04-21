@@ -39,6 +39,9 @@ def analyze_resume(resume_text):
         messages=messages,
         stream=True
     )
+
+    # Stream response word by word for better UX
+    # yield sends partial results as they arrive
     result = ""
     for chunk in response:
         result += chunk.choices[0].delta.content or ""
