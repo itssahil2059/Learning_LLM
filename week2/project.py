@@ -67,8 +67,9 @@ if __name__ == "__main__":
     outputs=analysis_output,
     title="📄 Resume Analyzer",
     description="Get AI-powered feedback on your resume",
-    examples=[  # ← add this
-        ["John Doe\nSoftware Engineer\n\nExperience:\n- Built web apps\n- Python, JavaScript\n\nEducation:\nBS Computer Science"]
+    examples=[
+        ["John Doe\nSoftware Engineer\n\nExperience:\n- Built web apps\n- Python, JavaScript\n\nEducation:\nBS Computer Science"],
+        ["Jane Smith\nData Scientist\n\nSkills:\n- Machine Learning, SQL, Python\n\nExperience:\n- 3 years analyzing data\n- Built ML models\n\nEducation:\nMS Data Science, MIT"]  # ← add this
     ],
     flagging_mode="never"
 )
