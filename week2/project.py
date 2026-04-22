@@ -75,3 +75,15 @@ if __name__ == "__main__":
 )
     
     view.launch()
+
+
+# ─────────────────────────────────────────
+# TODO: Future Features
+# ─────────────────────────────────────────
+# TODO: Add PDF upload support
+# TODO: Add resume scoring (0-100)
+# TODO: Add job description comparison
+# TODO: Add keyword extraction for ATS optimization
+# TODO: Add export analysis as PDF
+# TODO: Add multiple resume format support (DOC, DOCX)
+# TODO: Add industry-specific analysis (tech, finance, healthcare)
